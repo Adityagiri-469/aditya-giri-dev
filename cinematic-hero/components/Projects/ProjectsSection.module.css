@@ -1,0 +1,121 @@
+.section {
+  position: relative;
+  background: var(--color-void-2);
+  padding: clamp(5rem, 10vh, 7.5rem) clamp(1.5rem, 6vw, 5rem) clamp(8rem, 14vh, 11rem);
+}
+
+.header {
+  max-width: 1180px;
+  margin: 0 auto clamp(2.5rem, 5vw, 3.5rem);
+}
+
+.eyebrow {
+  margin: 0 0 1rem;
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--color-ember);
+}
+
+.heading {
+  margin: 0;
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: clamp(2.6rem, 6vw, 4.5rem);
+  color: var(--color-bone);
+}
+
+.stack {
+  max-width: 1180px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.card {
+  position: sticky;
+  background: var(--color-void);
+  border: 1px solid rgba(245, 241, 234, 0.1);
+  border-radius: 22px;
+  padding: clamp(2rem, 4vw, 3rem);
+  margin-bottom: 1.5rem;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.5);
+  transition: border-color 0.4s var(--ease-cinematic), transform 0.4s var(--ease-cinematic);
+}
+
+.card:hover {
+  border-color: rgba(255, 122, 51, 0.35);
+}
+
+.cardTop {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.cardIndex {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: clamp(1.6rem, 3vw, 2.1rem);
+  color: var(--color-amber);
+  line-height: 1;
+}
+
+.cardCategory {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-smoke);
+}
+
+.liveLink {
+  margin-left: auto;
+  padding: 0.5rem 1.1rem;
+  border-radius: 999px;
+  border: 1px solid rgba(245, 241, 234, 0.2);
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--color-bone);
+  text-decoration: none;
+  transition: border-color 0.35s var(--ease-cinematic), background 0.35s var(--ease-cinematic),
+    color 0.35s var(--ease-cinematic);
+}
+
+.liveLink:hover {
+  border-color: var(--color-ember);
+  background: rgba(255, 122, 51, 0.12);
+  color: var(--color-amber);
+}
+
+.cardTitle {
+  margin: 0 0 0.85rem;
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: clamp(1.5rem, 3vw, 2.1rem);
+  color: var(--color-bone);
+}
+
+.cardDescription {
+  margin: 0;
+  max-width: 40rem;
+  font-family: var(--font-body);
+  font-weight: 300;
+  font-size: clamp(0.92rem, 1.1vw, 1.02rem);
+  line-height: 1.65;
+  color: rgba(245, 241, 234, 0.72);
+}
+
+@media (max-width: 640px) {
+  .card {
+    padding: 1.5rem;
+  }
+
+  .liveLink {
+    margin-left: 0;
+  }
+}

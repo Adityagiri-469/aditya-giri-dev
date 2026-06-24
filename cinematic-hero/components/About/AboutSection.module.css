@@ -1,0 +1,158 @@
+.section {
+  position: relative;
+  z-index: 50;
+  background: var(--color-void-2);
+  border-top: 1px solid rgba(245, 241, 234, 0.08);
+  border-radius: 28px 28px 0 0;
+  box-shadow: 0 -40px 80px rgba(0, 0, 0, 0.55);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: clamp(5rem, 10vh, 8rem) clamp(1.5rem, 6vw, 5rem);
+}
+
+.inner {
+  width: 100%;
+  max-width: 1180px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: clamp(2.5rem, 6vw, 5rem);
+  align-items: center;
+}
+
+/* ---- Text column ------------------------------------------------ */
+
+.eyebrow {
+  margin: 0 0 1.1rem;
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--color-ember);
+}
+
+.heading {
+  margin: 0 0 1.75rem;
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: clamp(1.9rem, 3.6vw, 2.9rem);
+  line-height: 1.25;
+  color: var(--color-bone);
+  max-width: 30rem;
+}
+
+.body {
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+  max-width: 32rem;
+  margin-bottom: 2.75rem;
+}
+
+.body p {
+  margin: 0;
+  font-family: var(--font-body);
+  font-weight: 300;
+  font-size: clamp(0.95rem, 1.2vw, 1.08rem);
+  line-height: 1.7;
+  color: rgba(245, 241, 234, 0.75);
+}
+
+.stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: clamp(1.75rem, 4vw, 3rem);
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.statValue {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: clamp(1.7rem, 2.6vw, 2.2rem);
+  color: var(--color-amber);
+  line-height: 1;
+}
+
+.statLabel {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--color-smoke);
+  max-width: 9rem;
+}
+
+/* ---- Portrait column ---------------------------------------------- */
+
+.portraitCol {
+  position: relative;
+  aspect-ratio: 4 / 5;
+  border-radius: 18px;
+  overflow: hidden;
+  border: 1px solid rgba(245, 241, 234, 0.1);
+  background: radial-gradient(circle at 30% 20%, #241a10 0%, var(--color-void) 75%);
+}
+
+.frameLabel {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  z-index: 2;
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.1em;
+  color: rgba(245, 241, 234, 0.6);
+  background: rgba(10, 9, 7, 0.45);
+  padding: 0.3rem 0.6rem;
+  border-radius: 999px;
+  backdrop-filter: blur(10px);
+}
+
+.portraitImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.portraitFallback {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 2rem;
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--color-smoke);
+}
+
+.portraitFallback code {
+  color: var(--color-amber);
+}
+
+/* ---- Responsive ------------------------------------------------------ */
+
+@media (max-width: 880px) {
+  .inner {
+    grid-template-columns: 1fr;
+  }
+
+  .portraitCol {
+    order: -1;
+    max-width: 22rem;
+    margin: 0 auto;
+  }
+
+  .heading,
+  .body {
+    max-width: none;
+  }
+}

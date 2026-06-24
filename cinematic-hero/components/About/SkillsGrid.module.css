@@ -1,0 +1,58 @@
+.grid {
+  width: 100%;
+  max-width: 1180px;
+  margin: clamp(3rem, 6vw, 4.5rem) auto 0;
+  border-top: 1px solid rgba(245, 241, 234, 0.08);
+  padding-top: clamp(2rem, 4vw, 2.75rem);
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 11rem 1fr;
+  align-items: start;
+  gap: 1.25rem;
+}
+
+.rowLabel {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-smoke);
+  padding-top: 0.5rem;
+}
+
+.pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.pill {
+  padding: 0.45rem 0.95rem;
+  border-radius: 999px;
+  border: 1px solid rgba(245, 241, 234, 0.14);
+  background: rgba(245, 241, 234, 0.04);
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  font-weight: 400;
+  color: rgba(245, 241, 234, 0.85);
+  transition: border-color 0.3s var(--ease-cinematic), background 0.3s var(--ease-cinematic),
+    color 0.3s var(--ease-cinematic);
+}
+
+.pill:hover {
+  border-color: var(--color-ember);
+  background: rgba(255, 122, 51, 0.08);
+  color: var(--color-amber);
+}
+
+@media (max-width: 640px) {
+  .row {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+  }
+}

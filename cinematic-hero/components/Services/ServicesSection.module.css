@@ -1,0 +1,84 @@
+.section {
+  position: relative;
+  background: var(--color-void);
+  padding: clamp(5rem, 10vh, 7.5rem) clamp(1.5rem, 6vw, 5rem);
+}
+
+.header {
+  max-width: 1180px;
+  margin: 0 auto clamp(3rem, 6vw, 4.5rem);
+}
+
+.eyebrow {
+  margin: 0 0 1rem;
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--color-ember);
+}
+
+.heading {
+  margin: 0;
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: clamp(2.6rem, 6vw, 4.5rem);
+  color: var(--color-bone);
+}
+
+.list {
+  max-width: 1180px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 6rem 1fr;
+  gap: clamp(1.25rem, 3vw, 2.5rem);
+  padding: clamp(1.75rem, 3.5vw, 2.5rem) 0;
+  border-top: 1px solid rgba(245, 241, 234, 0.1);
+  transition: padding-left 0.4s var(--ease-cinematic);
+}
+
+.row:hover {
+  padding-left: 0.5rem;
+}
+
+.row:last-child {
+  border-bottom: 1px solid rgba(245, 241, 234, 0.1);
+}
+
+.index {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  color: rgba(255, 122, 51, 0.35);
+  line-height: 1;
+}
+
+.rowTitle {
+  margin: 0 0 0.6rem;
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: clamp(1.25rem, 2.2vw, 1.6rem);
+  color: var(--color-bone);
+}
+
+.rowDescription {
+  margin: 0;
+  max-width: 38rem;
+  font-family: var(--font-body);
+  font-weight: 300;
+  font-size: clamp(0.92rem, 1.1vw, 1.02rem);
+  line-height: 1.65;
+  color: rgba(245, 241, 234, 0.7);
+}
+
+@media (max-width: 640px) {
+  .row {
+    grid-template-columns: 1fr;
+    gap: 0.6rem;
+  }
+}

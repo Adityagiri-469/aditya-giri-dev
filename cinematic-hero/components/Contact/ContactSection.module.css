@@ -1,0 +1,95 @@
+.section {
+  position: relative;
+  background: var(--color-void);
+  padding: clamp(5rem, 12vh, 8rem) clamp(1.5rem, 6vw, 5rem);
+}
+
+.header {
+  max-width: 1180px;
+  margin: 0 auto clamp(3rem, 6vw, 4rem);
+  text-align: center;
+}
+
+.heading {
+  margin: 0 0 1rem;
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: clamp(2.6rem, 6vw, 4.5rem);
+  color: var(--color-bone);
+}
+
+.eyebrow {
+  margin: 0;
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--color-smoke);
+}
+
+.grid {
+  max-width: 1180px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.25rem;
+}
+
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+  padding: 1.75rem;
+  border-radius: 18px;
+  border: 1px solid rgba(245, 241, 234, 0.12);
+  background: rgba(245, 241, 234, 0.03);
+  text-decoration: none;
+  transition: border-color 0.4s var(--ease-cinematic), transform 0.4s var(--ease-cinematic),
+    background 0.4s var(--ease-cinematic);
+}
+
+.card:hover {
+  border-color: var(--color-ember);
+  background: rgba(255, 122, 51, 0.06);
+  transform: translateY(-4px);
+}
+
+.arrow {
+  align-self: flex-end;
+  font-size: 1.1rem;
+  color: var(--color-smoke);
+  transition: color 0.35s var(--ease-cinematic);
+}
+
+.card:hover .arrow {
+  color: var(--color-amber);
+}
+
+.cardLabel {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-smoke);
+}
+
+.cardValue {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: clamp(1rem, 1.6vw, 1.2rem);
+  color: var(--color-bone);
+  word-break: break-word;
+}
+
+@media (max-width: 880px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 540px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
